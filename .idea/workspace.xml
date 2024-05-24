@@ -4,13 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3fe04ba8-57e7-4287-a7bc-9133102d784c" name="Changes" comment="add updateUserById test">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/testdata/users/deleteUserById.json" afterDir="false" />
+    <list default="true" id="3fe04ba8-57e7-4287-a7bc-9133102d784c" name="Changes" comment="add testng.xml">
+      <change afterPath="$PROJECT_DIR$/src/main/java/reporting/ExtentReportManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reporting/ReportingUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reporting/Setup.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/requests/UserRequests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/requests/UserRequests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/DataProvidersUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/DataProvidersUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/users/UserApis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/users/UserApis.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/users/UserTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/users/UserTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,15 +41,29 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false"
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/markr/Desktop/Projects/RestAssuredAutomationFramework/src/main/java"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\markr\Desktop\Projects\RestAssuredAutomationFramework\src\main\java" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\markr\Desktop\Projects\RestAssuredAutomationFramework\src\test\resources\testdata\users" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.UserTests">
+  <component name="RunManager" selected="TestNG.C:/Users/markr/Desktop/Projects/RestAssuredAutomationFramework/testng.xml">
+    <configuration name="C:/Users/markr/Desktop/Projects/RestAssuredAutomationFramework/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="RestAssuredAutomationFramework" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UserTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="RestAssuredAutomationFramework" />
       <extension name="coverage">
@@ -85,6 +101,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.C:/Users/markr/Desktop/Projects/RestAssuredAutomationFramework/testng.xml" />
         <item itemvalue="TestNG.UserTests" />
         <item itemvalue="TestNG.UserTests.createUserTest" />
       </list>
@@ -135,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1716574049194</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add testng.xml">
+      <created>1716579577157</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1716579577157</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,6 +182,7 @@
     <MESSAGE value="add createUser test" />
     <MESSAGE value="add getUserById test" />
     <MESSAGE value="add updateUserById test" />
-    <option name="LAST_COMMIT_MESSAGE" value="add updateUserById test" />
+    <MESSAGE value="add testng.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="add testng.xml" />
   </component>
 </project>

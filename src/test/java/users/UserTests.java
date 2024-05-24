@@ -1,5 +1,6 @@
 package users;
 
+import com.aventstack.extentreports.ExtentTest;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -7,6 +8,7 @@ import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.ITestContext;
 import org.testng.annotations.Test;
+import reporting.Setup;
 import utils.DataProvidersUtils;
 
 import java.util.HashMap;
@@ -17,6 +19,8 @@ public final class UserTests {
 
     @Test(priority = 1, dataProvider = "createUserProvider", dataProviderClass = DataProvidersUtils.class)
     private void createUserTest(Map<String, Object> userTest, ITestContext context) {
+        ExtentTest test = Setup.extentReports.createTest("Test name - " + userTest.get("testName"), (String) userTest.get("description"));
+        Setup.extentTest.set(test);
 
         Response response = UserApis.createUser(getBody(userTest.get("body")));
 
@@ -32,6 +36,9 @@ public final class UserTests {
 
     @Test(priority = 2, dataProvider = "getUserByIdProvider", dataProviderClass = DataProvidersUtils.class)
     private void getUserByIdTest(Map<String, Object> userTest, ITestContext context) throws JsonProcessingException {
+        ExtentTest test = Setup.extentReports.createTest("Test name - " + userTest.get("testName"), (String) userTest.get("description"));
+        Setup.extentTest.set(test);
+
         Map<String, Object> userMap = (Map<String, Object>) context.getAttribute("userMap");
 
         Response response = UserApis.getUserById(userMap.get("id"));
@@ -47,6 +54,9 @@ public final class UserTests {
 
     @Test(priority = 3, dataProvider = "updateUserByIdProvider", dataProviderClass = DataProvidersUtils.class)
     private void updateUserByIdTest(Map<String, Object> userTest, ITestContext context) throws JsonProcessingException {
+        ExtentTest test = Setup.extentReports.createTest("Test name - " + userTest.get("testName"), (String) userTest.get("description"));
+        Setup.extentTest.set(test);
+
         Map<String, Object> userMap = (Map<String, Object>) context.getAttribute("userMap");
 
         Response response = UserApis.updateUserById(userMap.get("id"), getBody(userTest.get("body")));
@@ -63,7 +73,10 @@ public final class UserTests {
     }
 
     @Test(priority = 4, dataProvider = "deleteUserByIdProvider", dataProviderClass = DataProvidersUtils.class)
-    private void deleteUserByIdTest(Map<String, Object> userTest, ITestContext context) throws JsonProcessingException {
+    private void deleteUserByIdTest(Map<String, Object> userTest, ITestContext context) {
+        ExtentTest test = Setup.extentReports.createTest("Test name - " + userTest.get("testName"), (String) userTest.get("description"));
+        Setup.extentTest.set(test);
+
         Map<String, Object> userMap = (Map<String, Object>) context.getAttribute("userMap");
 
         Response response = UserApis.deleteUserById(userMap.get("id"));
