@@ -2,7 +2,7 @@
   {
     "testName": "CreateUser_ValidRequest",
     "description": "Create user with valid request payload",
-    "expectedStatus": 201,
+    "expectedStatusCode": 201,
     "expectedErrorMessage": null,
     "body": {
       "name": "John",

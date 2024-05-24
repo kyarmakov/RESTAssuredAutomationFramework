@@ -23,4 +23,12 @@ public final class UserApis {
 
         return UserRequests.performGet(endpoint, id);
     }
+
+    static Response updateUserById(Object id, Object userPayload) {
+        String endpoint = FrameworkConstants.getBaseURI() + FrameworkConstants.getUsersEndpoint();
+        Map<String, String> headers = new HashMap<>();
+        headers.put("Content-Type", "application/json");
+
+        return UserRequests.performPut(endpoint, id, userPayload, headers);
+    }
 }

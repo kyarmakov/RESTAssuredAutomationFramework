@@ -2,7 +2,7 @@
   {
     "testName": "GetUser_GetExistingUser",
     "description": "Get existing user by id",
-    "expectedStatus": 200,
+    "expectedStatusCode": 200,
     "expectedErrorMessage": null,
     "body": {}
   }

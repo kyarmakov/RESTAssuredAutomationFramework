@@ -1,0 +1,15 @@
+[
+  {
+    "testName": "UpdateUser_ExistingUser",
+    "description": "Update existing user by id",
+    "expectedStatusCode": 200,
+    "expectedErrorMessage": null,
+    "body": {
+      "name": "Jane",
+      "surname": "Smith",
+      "email": "jane@gmail.com",
+      "age": 20,
+      "married": false
+    }
+  }
+]
