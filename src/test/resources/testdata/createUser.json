@@ -1,0 +1,15 @@
+[
+  {
+    "testName": "CreateUser_ValidRequest",
+    "description": "Create user with valid request payload",
+    "expectedStatus": 201,
+    "expectedErrorMessage": "",
+    "body": {
+      "name": "John",
+      "surname": "Doe",
+      "email": "john@gmail.com",
+      "age": 30,
+      "married": true
+    }
+  }
+]
