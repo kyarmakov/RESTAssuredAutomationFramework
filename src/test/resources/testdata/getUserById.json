@@ -1,0 +1,9 @@
+[
+  {
+    "testName": "GetUser_GetExistingUser",
+    "description": "Get existing user by id",
+    "expectedStatus": 200,
+    "expectedErrorMessage": null,
+    "body": {}
+  }
+]

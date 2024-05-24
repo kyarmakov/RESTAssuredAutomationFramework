@@ -14,4 +14,9 @@ public final class UserRequestSpecification {
                 .headers(headers)
                 .body(requestPayload);
     }
+
+    static RequestSpecification getRequestSpecification(Object id) {
+        return RestAssured.given()
+                .pathParam("id", id);
+    }
 }

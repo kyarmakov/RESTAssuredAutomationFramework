@@ -15,4 +15,11 @@ public final class UserRequests {
 
         return response;
     }
+
+    public static Response performGet(String endpoint, Object id) {
+        RequestSpecification requestSpecification = UserRequestSpecification.getRequestSpecification(id);
+        Response response = requestSpecification.get(endpoint + "/{id}");
+
+        return response;
+    }
 }
