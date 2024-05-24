@@ -29,4 +29,11 @@ public final class UserRequests {
 
         return response;
     }
+
+    public static Response performDelete(String endpoint, Object id) {
+        RequestSpecification requestSpecification = UserRequestSpecification.getRequestSpecification(id);
+        Response response = requestSpecification.delete(endpoint + "/{id}");
+
+        return response;
+    }
 }

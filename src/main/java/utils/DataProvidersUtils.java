@@ -55,4 +55,18 @@ public final class DataProvidersUtils {
 
         return list.iterator();
     }
+
+    @DataProvider
+    public static Iterator<Map<String, Object>> deleteUserByIdProvider() {
+        List<Map<String, Object>> list;
+
+        try {
+            list = new ObjectMapper()
+                    .readValue(new File(FrameworkConstants.getTestDataPath() + "/deleteUserById.json"), new TypeReference<>() {});
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        return list.iterator();
+    }
 }

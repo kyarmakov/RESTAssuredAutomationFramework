@@ -4,16 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3fe04ba8-57e7-4287-a7bc-9133102d784c" name="Changes" comment="add getUserById test">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/testdata/updateUserById.json" afterDir="false" />
+    <list default="true" id="3fe04ba8-57e7-4287-a7bc-9133102d784c" name="Changes" comment="add updateUserById test">
+      <change afterPath="$PROJECT_DIR$/src/test/resources/testdata/users/deleteUserById.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/requests/UserRequestSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/requests/UserRequestSpecification.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/requests/UserRequests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/requests/UserRequests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/utils/DataProvidersUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/DataProvidersUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/users/UserApis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/users/UserApis.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/users/UserTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/users/UserTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/testdata/createUser.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testdata/createUser.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/testdata/getUserById.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testdata/getUserById.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +42,11 @@
     "WebServerToolWindowFactoryState": "false"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\markr\Desktop\Projects\RestAssuredAutomationFramework\src\test\resources\testdata\users" />
+    </key>
+  </component>
   <component name="RunManager" selected="TestNG.UserTests">
     <configuration name="UserTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="RestAssuredAutomationFramework" />
@@ -96,7 +98,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1716561577384</updated>
-      <workItem from="1716561579412" duration="11214000" />
+      <workItem from="1716561579412" duration="12134000" />
     </task>
     <task id="LOCAL-00001" summary="add dependencies">
       <created>1716562083727</created>
@@ -126,7 +128,14 @@
       <option name="project" value="LOCAL" />
       <updated>1716572090419</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add updateUserById test">
+      <created>1716574049194</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1716574049194</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,6 +157,7 @@
     <MESSAGE value="add framework structure" />
     <MESSAGE value="add createUser test" />
     <MESSAGE value="add getUserById test" />
-    <option name="LAST_COMMIT_MESSAGE" value="add getUserById test" />
+    <MESSAGE value="add updateUserById test" />
+    <option name="LAST_COMMIT_MESSAGE" value="add updateUserById test" />
   </component>
 </project>

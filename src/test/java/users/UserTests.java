@@ -62,6 +62,18 @@ public final class UserTests {
         }
     }
 
+    @Test(priority = 4, dataProvider = "deleteUserByIdProvider", dataProviderClass = DataProvidersUtils.class)
+    private void deleteUserByIdTest(Map<String, Object> userTest, ITestContext context) throws JsonProcessingException {
+        Map<String, Object> userMap = (Map<String, Object>) context.getAttribute("userMap");
+
+        Response response = UserApis.deleteUserById(userMap.get("id"));
+
+        Assert.assertEquals(response.statusCode(), userTest.get("expectedStatusCode"));
+
+        if (response.statusCode() != 204)
+            Assert.assertEquals(response.jsonPath().get("message"), userTest.get("expectedErrorMessage"));
+    }
+
     private Object getBody(Object bodyValue) {
         if (!bodyValue.getClass().getName().equals("java.util.LinkedHashMap")) {
             Object body = new ObjectMapper()

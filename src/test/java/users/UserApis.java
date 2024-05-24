@@ -31,4 +31,10 @@ public final class UserApis {
 
         return UserRequests.performPut(endpoint, id, userPayload, headers);
     }
+
+    static Response deleteUserById(Object id) {
+        String endpoint = FrameworkConstants.getBaseURI() + FrameworkConstants.getUsersEndpoint();
+
+        return UserRequests.performDelete(endpoint, id);
+    }
 }

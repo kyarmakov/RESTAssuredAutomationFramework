@@ -1,0 +1,9 @@
+[
+  {
+    "testName": "DeleteUser_DeleteExistingUser",
+    "description": "Delete existing user by id",
+    "expectedStatusCode": 204,
+    "expectedErrorMessage": null,
+    "body": {}
+  }
+]
