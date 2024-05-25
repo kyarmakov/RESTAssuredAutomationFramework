@@ -9,6 +9,11 @@ Steps to run the app:
 4) Move to 'reports' directory ```cd reports/```
 5) Open generated report in your browser
 
-[Report example](https://drive.google.com/file/d/1wAa2hInDuiHyTYOyvvDi07SqEAHng4Xt/view?usp=sharing)
+Report examples:
 <br/>
+[Example1](https://drive.google.com/file/d/1wAa2hInDuiHyTYOyvvDi07SqEAHng4Xt/view?usp=sharing)
+<br/>
+[Example2](https://drive.google.com/file/d/1vriQ8x6wZJ8DPGKKMfwcxV1T7skORwu7/view?usp=sharing)
+<br/>
+
 Tests can be found in the project ```src/test/resources/testdata/users``` in json format
