@@ -1,9 +1,23 @@
 [
   {
     "testName": "DeleteUser_DeleteExistingUser",
-    "description": "Delete existing user by id",
+    "description": "Delete existing user",
     "expectedStatusCode": 204,
     "expectedErrorMessage": null,
-    "body": {}
+    "id": null
+  },
+  {
+    "testName": "DeleteUser_DeleteNonexistentUser",
+    "description": "Delete nonexistent user",
+    "expectedStatusCode": 404,
+    "expectedErrorMessage": "User with id: {id} cannot be found",
+    "id": 1234567890
+  },
+  {
+    "testName": "DeleteUser_IdAsStr",
+    "description": "Pass String Id",
+    "expectedStatusCode": 400,
+    "expectedErrorMessage": "invalid type for path variable",
+    "id": "abc"
   }
 ]

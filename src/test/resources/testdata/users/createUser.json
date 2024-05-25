@@ -11,5 +11,300 @@
       "age": 30,
       "married": true
     }
+  },
+  {
+    "testName": "CreateUser_MarriedAsFalse",
+    "description": "Create user with married set to false",
+    "expectedStatusCode": 201,
+    "expectedErrorMessage": null,
+    "body": {
+      "name": "John",
+      "surname": "Doe",
+      "email": "RANDOM_EMAIL",
+      "age": 30,
+      "married": false
+    }
+  },
+  {
+    "testName": "CreateUser_WithoutMarried",
+    "description": "Create user without married parameter",
+    "expectedStatusCode": 201,
+    "expectedErrorMessage": null,
+    "body": {
+      "name": "John",
+      "surname": "Doe",
+      "email": "RANDOM_EMAIL",
+      "age": 30
+    }
+  },
+  {
+    "testName": "CreateUser_EmptyPayload",
+    "description": "Create user with empty payload",
+    "expectedStatusCode": 400,
+    "expectedErrorMessage": "name is required;surname is required;email is required;age is required;",
+    "body": {}
+  },
+  {
+    "testName": "CreateUser_ArrayPayload",
+    "description": "Create user with empty array instead of body",
+    "expectedStatusCode": 400,
+    "expectedErrorMessage": "invalid type for request body, should be {}",
+    "body": []
+  },
+  {
+    "testName": "CreateUser_NullValues",
+    "description": "Create user with values set to null",
+    "expectedStatusCode": 400,
+    "expectedErrorMessage": "name: string is expected;surname: string is expected;email: string is expected;age: integer is expected;",
+    "body": {
+      "name": null,
+      "surname": null,
+      "email": null,
+      "age": null,
+      "married": null
+    }
+  },
+  {
+    "testName": "CreateUser_WithoutName",
+    "description": "Create user without name parameter",
+    "expectedStatusCode": 400,
+    "expectedErrorMessage": "name is required;",
+    "body": {
+      "surname": "Doe",
+      "email": "RANDOM_EMAIL",
+      "age": 30,
+      "married": true
+    }
+  },
+  {
+    "testName": "CreateUser_NameAsInt",
+    "description": "Create user with name as Integer",
+    "expectedStatusCode": 400,
+    "expectedErrorMessage": "name: string is expected;",
+    "body": {
+      "name": 123,
+      "surname": "Doe",
+      "email": "RANDOM_EMAIL",
+      "age": 30,
+      "married": true
+    }
+  },
+  {
+    "testName": "CreateUser_NameIntAsStr",
+    "description": "Create user with Integer as String name",
+    "expectedStatusCode": 400,
+    "expectedErrorMessage": "name: should only accept a-z A-Z .,- characters;",
+    "body": {
+      "name": "123",
+      "surname": "Doe",
+      "email": "RANDOM_EMAIL",
+      "age": 30,
+      "married": true
+    }
+  },
+  {
+    "testName": "CreateUser_NameSingleChar",
+    "description": "Create user with name consisting of single character",
+    "expectedStatusCode": 400,
+    "expectedErrorMessage": "name: minimum 2 characters are required;",
+    "body": {
+      "name": "U",
+      "surname": "Doe",
+      "email": "RANDOM_EMAIL",
+      "age": 30,
+      "married": true
+    }
+  },
+  {
+    "testName": "CreateUser_NameLengthGreaterThan35",
+    "description": "Create user with name length greater than 35",
+    "expectedStatusCode": 400,
+    "expectedErrorMessage": "name: should be no longer than 35 characters;",
+    "body": {
+      "name": "JasonJasonJasonJasonJasonJasonJasonJ",
+      "surname": "Doe",
+      "email": "RANDOM_EMAIL",
+      "age": 30,
+      "married": true
+    }
+  },
+  {
+    "testName": "CreateUser_WithoutSurname",
+    "description": "Create user without surname parameter",
+    "expectedStatusCode": 400,
+    "expectedErrorMessage": "surname is required;",
+    "body": {
+      "name": "John",
+      "email": "RANDOM_EMAIL",
+      "age": 30,
+      "married": true
+    }
+  },
+  {
+    "testName": "CreateUser_SurnameAsInt",
+    "description": "Create user with surname as Integer",
+    "expectedStatusCode": 400,
+    "expectedErrorMessage": "surname: string is expected;",
+    "body": {
+      "name": "John",
+      "surname": 123,
+      "email": "RANDOM_EMAIL",
+      "age": 30,
+      "married": true
+    }
+  },
+  {
+    "testName": "CreateUser_SurnameIntAsStr",
+    "description": "Create user with Integer as String surname",
+    "expectedStatusCode": 400,
+    "expectedErrorMessage": "surname: should only accept a-z A-Z .,- characters;",
+    "body": {
+      "name": "John",
+      "surname": "123",
+      "email": "RANDOM_EMAIL",
+      "age": 30,
+      "married": true
+    }
+  },
+  {
+    "testName": "CreateUser_SurnameSingleChar",
+    "description": "Create user with surname consisting of single character",
+    "expectedStatusCode": 400,
+    "expectedErrorMessage": "surname: minimum 2 characters are required;",
+    "body": {
+      "name": "John",
+      "surname": "U",
+      "email": "RANDOM_EMAIL",
+      "age": 30,
+      "married": true
+    }
+  },
+  {
+    "testName": "CreateUser_SurnameLengthGreaterThan35",
+    "description": "Create user with surname length greater than 35",
+    "expectedStatusCode": 400,
+    "expectedErrorMessage": "surname: should be no longer than 35 characters;",
+    "body": {
+      "name": "John",
+      "surname": "DoeDoeDoeDoeDoeDoeDoeDoeDoeDoeDoeDoe",
+      "email": "RANDOM_EMAIL",
+      "age": 30,
+      "married": true
+    }
+  },
+  {
+    "testName": "CreateUser_WithoutAge",
+    "description": "Create user without age parameter",
+    "expectedStatusCode": 400,
+    "expectedErrorMessage": "age is required;",
+    "body": {
+      "name": "John",
+      "surname": "Doe",
+      "email": "RANDOM_EMAIL",
+      "married": true
+    }
+  },
+  {
+    "testName": "CreateUser_AgeAsStr",
+    "description": "Create user with age as String",
+    "expectedStatusCode": 400,
+    "expectedErrorMessage": "age: integer is expected;",
+    "body": {
+      "name": "John",
+      "surname": "Doe",
+      "email": "RANDOM_EMAIL",
+      "age": "18",
+      "married": true
+    }
+  },
+  {
+    "testName": "CreateUser_AgeAsFloat",
+    "description": "Create user with age as Float",
+    "expectedStatusCode": 400,
+    "expectedErrorMessage": "age: integer is expected;",
+    "body": {
+      "name": "John",
+      "surname": "Doe",
+      "email": "RANDOM_EMAIL",
+      "age": 18.5,
+      "married": true
+    }
+  },
+  {
+    "testName": "CreateUser_AgeLessThan18",
+    "description": "Create user with age less than 18",
+    "expectedStatusCode": 400,
+    "expectedErrorMessage": "age: should be 18 or higher;",
+    "body": {
+      "name": "John",
+      "surname": "Doe",
+      "email": "RANDOM_EMAIL",
+      "age": 17,
+      "married": true
+    }
+  },
+  {
+    "testName": "CreateUser_DuplicateEmail",
+    "description": "Create user with existing email",
+    "expectedStatusCode": 400,
+    "expectedErrorMessage": "User with such email already exists",
+    "body": {
+      "name": "John",
+      "surname": "Doe",
+      "email": "john@gmail.com",
+      "age": 30,
+      "married": true
+    }
+  },
+  {
+    "testName": "CreateUser_WithoutEmail",
+    "description": "Create user without email",
+    "expectedStatusCode": 400,
+    "expectedErrorMessage": "email is required;",
+    "body": {
+      "name": "John",
+      "surname": "Doe",
+      "age": 30,
+      "married": true
+    }
+  },
+  {
+    "testName": "CreateUser_InvalidEmail",
+    "description": "Create user with invalid email",
+    "expectedStatusCode": 400,
+    "expectedErrorMessage": "email: invalid email;",
+    "body": {
+      "name": "John",
+      "surname": "Doe",
+      "email": "abc123",
+      "age": 30,
+      "married": true
+    }
+  },
+  {
+    "testName": "CreateUser_EmailAsInt",
+    "description": "Create user with email as Integer",
+    "expectedStatusCode": 400,
+    "expectedErrorMessage": "email: string is expected;",
+    "body": {
+      "name": "John",
+      "surname": "Doe",
+      "email": 123,
+      "age": 30,
+      "married": true
+    }
+  },
+  {
+    "testName": "CreateUser_MarriedAsStr",
+    "description": "Create user with married as String",
+    "expectedStatusCode": 400,
+    "expectedErrorMessage": "married: can be of type boolean, null or omitted",
+    "body": {
+      "name": "John",
+      "surname": "Doe",
+      "email": "RANDOM_EMAIL",
+      "age": 30,
+      "married": "true"
+    }
   }
 ]

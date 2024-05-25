@@ -4,6 +4,20 @@
     "description": "Get existing user by id",
     "expectedStatusCode": 200,
     "expectedErrorMessage": null,
-    "body": {}
+    "id": null
+  },
+  {
+    "testName": "GetUser_GetNonexistentUser",
+    "description": "Get nonexistent user",
+    "expectedStatusCode": 404,
+    "expectedErrorMessage": "User with id: {id} cannot be found",
+    "id": 1234567890
+  },
+  {
+    "testName": "GetUser_IdAsStr",
+    "description": "Pass String Id",
+    "expectedStatusCode": 400,
+    "expectedErrorMessage": "invalid type for path variable",
+    "id": "abc"
   }
 ]

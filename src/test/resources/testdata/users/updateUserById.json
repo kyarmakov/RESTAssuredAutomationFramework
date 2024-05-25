@@ -4,12 +4,332 @@
     "description": "Update existing user by id",
     "expectedStatusCode": 200,
     "expectedErrorMessage": null,
+    "id": null,
     "body": {
       "name": "Jane",
       "surname": "Smith",
       "email": "jane@gmail.com",
       "age": 20,
       "married": false
+    }
+  },
+  {
+    "testName": "UpdateUser_NonexistentUser",
+    "description": "Update nonexistent user",
+    "expectedStatusCode": 404,
+    "expectedErrorMessage": "User with id: {id} cannot be found",
+    "id": 1234567890,
+    "body": {
+      "name": "Jane",
+      "surname": "Smith",
+      "email": "jane@gmail.com",
+      "age": 20,
+      "married": false
+    }
+  },
+  {
+    "testName": "UpdateUser_WithoutMarried",
+    "description": "Update user without married parameter",
+    "expectedStatusCode": 200,
+    "expectedErrorMessage": null,
+    "id": null,
+    "body": {
+      "name": "Jane",
+      "surname": "Smith",
+      "email": "jane@gmail.com",
+      "age": 20
+    }
+  },
+  {
+    "testName": "UpdateUser_IdAsStr",
+    "description": "Pass String Id",
+    "expectedStatusCode": 400,
+    "expectedErrorMessage": "invalid type for path variable",
+    "id": "abc",
+    "body": {
+      "name": "Jane",
+      "surname": "Smith",
+      "email": "jane@gmail.com",
+      "age": 20,
+      "married": false
+    }
+  },
+  {
+    "testName": "UpdateUser_EmptyPayload",
+    "description": "Update user with empty payload",
+    "expectedStatusCode": 400,
+    "expectedErrorMessage": "name is required;surname is required;email is required;age is required;",
+    "id": null,
+    "body": {}
+  },
+  {
+    "testName": "UpdateUser_ArrayPayload",
+    "description": "Update user with empty array instead of body",
+    "expectedStatusCode": 400,
+    "expectedErrorMessage": "invalid type for request body, should be {}",
+    "id": null,
+    "body": []
+  },
+  {
+    "testName": "UpdateUser_NullValues",
+    "description": "Update user with values set to null",
+    "expectedStatusCode": 400,
+    "expectedErrorMessage": "name: string is expected;surname: string is expected;email: string is expected;age: integer is expected;",
+    "id": null,
+    "body": {
+      "name": null,
+      "surname": null,
+      "email": null,
+      "age": null,
+      "married": null
+    }
+  },
+  {
+    "testName": "UpdateUser_WithoutName",
+    "description": "Update user without name parameter",
+    "expectedStatusCode": 400,
+    "expectedErrorMessage": "name is required;",
+    "id": null,
+    "body": {
+      "surname": "Smith",
+      "email": "jane@gmail.com",
+      "age": 20,
+      "married": false
+    }
+  },
+  {
+    "testName": "UpdateUser_NameAsInt",
+    "description": "Update user with name as Integer",
+    "expectedStatusCode": 400,
+    "expectedErrorMessage": "name: string is expected;",
+    "id": null,
+    "body": {
+      "name": 123,
+      "surname": "Smith",
+      "email": "jane@gmail.com",
+      "age": 20,
+      "married": false
+    }
+  },
+  {
+    "testName": "UpdateUser_NameIntAsStr",
+    "description": "Update user with Integer as String name",
+    "expectedStatusCode": 400,
+    "expectedErrorMessage": "name: should only accept a-z A-Z .,- characters;",
+    "id": null,
+    "body": {
+      "name": "123",
+      "surname": "Smith",
+      "email": "jane@gmail.com",
+      "age": 20,
+      "married": false
+    }
+  },
+  {
+    "testName": "UpdateUser_NameSingleChar",
+    "description": "Update user with name consisting of single character",
+    "expectedStatusCode": 400,
+    "expectedErrorMessage": "name: minimum 2 characters are required;",
+    "id": null,
+    "body": {
+      "name": "U",
+      "surname": "Smith",
+      "email": "jane@gmail.com",
+      "age": 20,
+      "married": false
+    }
+  },
+  {
+    "testName": "UpdateUser_NameLengthGreaterThan35",
+    "description": "Update user with name length greater than 35",
+    "expectedStatusCode": 400,
+    "expectedErrorMessage": "name: should be no longer than 35 characters;",
+    "id": null,
+    "body": {
+      "name": "JasonJasonJasonJasonJasonJasonJasonJ",
+      "surname": "Smith",
+      "email": "jane@gmail.com",
+      "age": 20,
+      "married": false
+    }
+  },
+  {
+    "testName": "UpdateUser_WithoutSurname",
+    "description": "Update user without surname parameter",
+    "expectedStatusCode": 400,
+    "expectedErrorMessage": "surname is required;",
+    "id": null,
+    "body": {
+      "name": "Jane",
+      "email": "jane@gmail.com",
+      "age": 20,
+      "married": false
+    }
+  },
+  {
+    "testName": "UpdateUser_SurnameAsInt",
+    "description": "Update user with surname as Integer",
+    "expectedStatusCode": 400,
+    "expectedErrorMessage": "surname: string is expected;",
+    "id": null,
+    "body": {
+      "name": "Jane",
+      "surname": 123,
+      "email": "jane@gmail.com",
+      "age": 20,
+      "married": false
+    }
+  },
+  {
+    "testName": "UpdateUser_SurnameIntAsStr",
+    "description": "Update user with Integer as String surname",
+    "expectedStatusCode": 400,
+    "expectedErrorMessage": "surname: should only accept a-z A-Z .,- characters;",
+    "id": null,
+    "body": {
+      "name": "Jane",
+      "surname": "123",
+      "email": "jane@gmail.com",
+      "age": 20,
+      "married": false
+    }
+  },
+  {
+    "testName": "UpdateUser_SurnameSingleChar",
+    "description": "Update user with surname consisting of single character",
+    "expectedStatusCode": 400,
+    "expectedErrorMessage": "surname: minimum 2 characters are required;",
+    "id": null,
+    "body": {
+      "name": "Jane",
+      "surname": "U",
+      "email": "jane@gmail.com",
+      "age": 20,
+      "married": false
+    }
+  },
+  {
+    "testName": "UpdateUser_SurnameLengthGreaterThan35",
+    "description": "Update user with surname length greater than 35",
+    "expectedStatusCode": 400,
+    "expectedErrorMessage": "surname: should be no longer than 35 characters;",
+    "id": null,
+    "body": {
+      "name": "Jane",
+      "surname": "DoeDoeDoeDoeDoeDoeDoeDoeDoeDoeDoeDoe",
+      "email": "jane@gmail.com",
+      "age": 20,
+      "married": false
+    }
+  },
+  {
+    "testName": "UpdateUser_WithoutAge",
+    "description": "Update user without age parameter",
+    "expectedStatusCode": 400,
+    "expectedErrorMessage": "age is required;",
+    "id": null,
+    "body": {
+      "name": "Jane",
+      "surname": "Smith",
+      "email": "jane@gmail.com",
+      "married": false
+    }
+  },
+  {
+    "testName": "UpdateUser_AgeAsStr",
+    "description": "Update user with age as String",
+    "expectedStatusCode": 400,
+    "expectedErrorMessage": "age: integer is expected;",
+    "id": null,
+    "body": {
+      "name": "Jane",
+      "surname": "Smith",
+      "email": "jane@gmail.com",
+      "age": "20",
+      "married": false
+    }
+  },
+  {
+    "testName": "UpdateUser_AgeAsFloat",
+    "description": "Update user with age as Float",
+    "expectedStatusCode": 400,
+    "expectedErrorMessage": "age: integer is expected;",
+    "id": null,
+    "body": {
+      "name": "Jane",
+      "surname": "Smith",
+      "email": "jane@gmail.com",
+      "age": 20.5,
+      "married": false
+    }
+  },
+  {
+    "testName": "UpdateUser_AgeLessThan18",
+    "description": "Create user with age less than 18",
+    "expectedStatusCode": 400,
+    "expectedErrorMessage": "age: should be 18 or higher;",
+    "id": null,
+    "body": {
+      "name": "Jane",
+      "surname": "Smith",
+      "email": "jane@gmail.com",
+      "age": 17,
+      "married": false
+    }
+  },
+  {
+    "testName": "UpdateUser_WithoutEmail",
+    "description": "Create user without email",
+    "expectedStatusCode": 400,
+    "expectedErrorMessage": "email is required;",
+    "id": null,
+    "body": {
+      "name": "Jane",
+      "surname": "Smith",
+      "age": 20,
+      "married": false
+    }
+  },
+  {
+    "testName": "UpdateUser_InvalidEmail",
+    "description": "Update user with invalid email",
+    "expectedStatusCode": 400,
+    "expectedErrorMessage": "email: invalid email;",
+    "id": null,
+    "body": {
+      "name": "Jane",
+      "surname": "Smith",
+      "email": "abc123",
+      "age": 20,
+      "married": false
+    }
+  },
+  {
+    "testName": "UpdateUser_EmailAsInt",
+    "description": "Update user with email as Integer",
+    "expectedStatusCode": 400,
+    "expectedErrorMessage": "email: string is expected;",
+    "id": null,
+    "body": {
+      "name": "Jane",
+      "surname": "Smith",
+      "email": 123,
+      "age": 20,
+      "married": false
+    }
+  },
+  {
+    "testName": "UpdateUser_MarriedAsStr",
+    "description": "Update user with married as String",
+    "expectedStatusCode": 400,
+    "expectedErrorMessage": "married: can be of type boolean, null or omitted",
+    "id": null,
+    "body": {
+      "name": "Jane",
+      "surname": "Smith",
+      "email": 123,
+      "age": 20,
+      "married": "false"
     }
   }
 ]
