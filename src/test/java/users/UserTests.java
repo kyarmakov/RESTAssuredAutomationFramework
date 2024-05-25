@@ -15,14 +15,11 @@ import utils.RandomUtils;
 import java.util.Map;
 import java.util.Objects;
 
-public final class UserTests {
+public final class UserTests extends BaseTest {
     private UserTests() {}
 
     @Test(priority = 1, dataProvider = "createUserProvider", dataProviderClass = DataProvidersUtils.class)
-    private void createUserTest(Map<String, Object> userTest, ITestContext context) {
-        ExtentTest test = Setup.extentReports.createTest("Test name - " + userTest.get("testName"), (String) userTest.get("description"));
-        Setup.extentTest.set(test);
-
+    void createUserTest(Map<String, Object> userTest, ITestContext context) {
         Response response = UserApis.createUser(getBody(userTest.get("body")));
 
         Assert.assertEquals(response.statusCode(), userTest.get("expectedStatusCode"));
@@ -36,10 +33,7 @@ public final class UserTests {
     }
 
     @Test(priority = 2, dataProvider = "getUserByIdProvider", dataProviderClass = DataProvidersUtils.class)
-    private void getUserByIdTest(Map<String, Object> userTest, ITestContext context) throws JsonProcessingException {
-        ExtentTest test = Setup.extentReports.createTest("Test name - " + userTest.get("testName"), (String) userTest.get("description"));
-        Setup.extentTest.set(test);
-
+    void getUserByIdTest(Map<String, Object> userTest, ITestContext context) throws JsonProcessingException {
         Map<String, Object> userMap = (Map<String, Object>) context.getAttribute("userMap");
         Response response;
         String errorMessage = null;
@@ -61,10 +55,7 @@ public final class UserTests {
     }
 
     @Test(priority = 3, dataProvider = "updateUserByIdProvider", dataProviderClass = DataProvidersUtils.class)
-    private void updateUserByIdTest(Map<String, Object> userTest, ITestContext context) throws JsonProcessingException {
-        ExtentTest test = Setup.extentReports.createTest("Test name - " + userTest.get("testName"), (String) userTest.get("description"));
-        Setup.extentTest.set(test);
-
+    void updateUserByIdTest(Map<String, Object> userTest, ITestContext context) throws JsonProcessingException {
         Map<String, Object> userMap = (Map<String, Object>) context.getAttribute("userMap");
         Response response;
         String errorMessage = (String) userTest.get("expectedErrorMessage");
@@ -90,10 +81,7 @@ public final class UserTests {
     }
 
     @Test(priority = 4, dataProvider = "deleteUserByIdProvider", dataProviderClass = DataProvidersUtils.class)
-    private void deleteUserByIdTest(Map<String, Object> userTest, ITestContext context) {
-        ExtentTest test = Setup.extentReports.createTest("Test name - " + userTest.get("testName"), (String) userTest.get("description"));
-        Setup.extentTest.set(test);
-
+    void deleteUserByIdTest(Map<String, Object> userTest, ITestContext context) {
         Map<String, Object> userMap = (Map<String, Object>) context.getAttribute("userMap");
         Response response;
         String errorMessage = null;
