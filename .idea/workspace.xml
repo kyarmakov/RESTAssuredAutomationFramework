@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3fe04ba8-57e7-4287-a7bc-9133102d784c" name="Changes" comment="add extentreports">
-      <change afterPath="$PROJECT_DIR$/src/test/java/users/BaseTest.java" afterDir="false" />
+    <list default="true" id="3fe04ba8-57e7-4287-a7bc-9133102d784c" name="Changes" comment="add BaseTest">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/users/UserTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/users/UserTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/RandomUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/RandomUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,15 +31,15 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/markr/Desktop/Projects/RESTAssuredAutomationFramework",
-    "nodejs_package_manager_path": "npm"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/markr/Desktop/Projects/RESTAssuredAutomationFramework&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\markr\Desktop\Projects\RestAssuredAutomationFramework\src\main\java" />
@@ -113,7 +112,8 @@
       <updated>1716561577384</updated>
       <workItem from="1716561579412" duration="12134000" />
       <workItem from="1716637960829" duration="13267000" />
-      <workItem from="1716665813823" duration="296000" />
+      <workItem from="1716665813823" duration="851000" />
+      <workItem from="1716716541036" duration="305000" />
     </task>
     <task id="LOCAL-00001" summary="add dependencies">
       <created>1716562083727</created>
@@ -164,7 +164,14 @@
       <option name="project" value="LOCAL" />
       <updated>1716581613096</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add BaseTest">
+      <created>1716666173283</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1716666173283</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,6 +196,7 @@
     <MESSAGE value="add updateUserById test" />
     <MESSAGE value="add testng.xml" />
     <MESSAGE value="add extentreports" />
-    <option name="LAST_COMMIT_MESSAGE" value="add extentreports" />
+    <MESSAGE value="add BaseTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="add BaseTest" />
   </component>
 </project>

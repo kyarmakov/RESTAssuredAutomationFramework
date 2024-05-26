@@ -1,13 +1,11 @@
 package utils;
 
-import net.datafaker.Faker;
+import org.apache.commons.lang3.RandomStringUtils;
 
 public final class RandomUtils {
-    private static final Faker faker = new Faker();
-
     private RandomUtils() {}
 
     public static String getRandomEmail() {
-        return faker.internet().emailAddress();
+        return RandomStringUtils.random(8, true, true) + "@gmail.com";
     }
 }
