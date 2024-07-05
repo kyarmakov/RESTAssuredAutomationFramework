@@ -1,6 +1,6 @@
 REST-assured DDT framework for testing [SpringBootRESTApi](https://github.com/kyarmakov/SpringBootRESTApi) app.
 
-To run the app you'll need JDK-17 and Maven installed locally on your machine and a running [SpringBootRESTApi](https://github.com/kyarmakov/SpringBootRESTApi) docker container.
+To run the app you'll need JDK-17 and Maven installed locally on your machine and a running [SpringBootRESTApi](https://github.com/kyarmakov/SpringBootRESTApi) app.
 
 Steps to run the app:
 1) Clone the project into a directory of your preference (you can use Git Bash on Windows)
